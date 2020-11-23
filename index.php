@@ -32,11 +32,3 @@ if (!empty($arrUrl[2])) {
 
 require_once("Libraries/Core/Autoload.php");
 require_once("Libraries/Core/Load.php");
-
-/*echo "<br>";
-echo "Controlador: ". $controller;
-echo "<br>";
-echo "Metodo: ". $method;
-echo "<br>";
-echo "Parametros: ".$params;
-*/

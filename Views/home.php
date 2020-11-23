@@ -3,9 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tienda Virtual</title>
+    <title><?php echo $data["tag_page"] ?></title>
 </head>
 <body>
-    <h1>Bienvenido a mi Sitio Web Guapo</h1>
+    
+    <section id = "<?php echo $data["page_id"] ?>">
+        
+        <h1><?php echo $data["page_tittle"] ?></h1>
+        <p><?php echo $data["page_content"] ?></p>
+
+    </section>
 </body>
 </html>
