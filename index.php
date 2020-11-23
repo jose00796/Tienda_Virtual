@@ -30,30 +30,8 @@ if (!empty($arrUrl[2])) {
     }
 }
 
-spl_autoload_register(function($class){ 
-        if (file_exists(LIBS.'Core/'.$class.".php")) {
-            require_once (LIBS.'Core/'.$class.".php");
-        }
-});
-
-//LOAD.PHP 
-
-$controller_file = "Controllers/".$controller.".php";
-
-if (file_exists($controller_file)) {
-    
-    require_once($controller_file);
-    $controller = new $controller();
-
-   if (method_exists($controller, $method)) {
-       $controller->{$method}($params);
-   } else{
-        echo "METODO NO EXISTE";
-   }
-
-}else{
-    echo $controller_file." = ". "NO EXISTE EN EL DIRECTORIO";
-}
+require_once("Libraries/Core/Autoload.php");
+require_once("Libraries/Core/Load.php");
 
 /*echo "<br>";
 echo "Controlador: ". $controller;

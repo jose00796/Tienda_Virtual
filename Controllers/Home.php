@@ -9,7 +9,7 @@ class Home extends Controllers
 
     public function home($params)
     {
-        //echo "Mensaje desde el Controlador";
+        $this->view->getView($this,"home");
     }
 
     public function datos($params)
