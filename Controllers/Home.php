@@ -18,14 +18,33 @@ class Home extends Controllers
         $this->view->getView($this,"home", $data);
     }
 
-    public function datos($params)
+    public function insertar()
     {
-        echo "Daro Recibido = ".$params;
+        $data = $this->model->setUser("Sara", 19);
+        print_r($data);
     }
 
-    public function carrito($params)
+    public function verUsuario($id)
     {
-        $carrito = $this->model->getCarrito($params);
-        echo $carrito;
+        $data = $this->model->getuser($id);
+        print_r($data);
+    }
+
+    public function actualizar()
+    {
+        $data = $this->model->updateUser(1, "Jose", 24);
+        print_r($data);
+    }
+
+    public function verUsuarios()
+    {
+        $data = $this->model->getUsers();
+        print_r($data);
+    }
+
+    public function EliminarUsuario($id)
+    {
+        $data = $this->model->delUser($id);
+        print_r($data);
     }
 }
